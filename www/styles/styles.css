@@ -1,0 +1,81 @@
+
+@media (min-width: 600px) {
+  .logo{ margin: 0% 5% 0% 5%;}
+  .form_class{margin:15% 0 20% 0;}
+  .enter{margin:28% 0 10% 65%; position: relative;   font-size:25px;border-radius: 0px;  }
+  #banner{
+    margin: 50px 0 15px 0;
+    background-image: url(imgs/codejam.gif),url(imgs/back.gif);
+  }
+  .tech{
+    margin-left: 25%;
+    height: 39px;}
+ }
+ @media (max-width: 600px) {
+   .logo{ margin: 0% 2% 0% 2%;}
+   .form_class{margin:50% 0 50% 0;}
+   .enter{    margin: 40% 0 60% 20%;  width: 70%; font-size:25px;border-radius: 0px; }
+   #banner{margin: 40px 0 15px 0;
+            background-repeat: no-repeat;
+             background-size: 450px,cover;}
+   .tech{
+     margin-left: 4%;
+     width: 90%;}
+  }
+  @font-face {
+      font-family: cf_revolutionregular;
+      src:  url(fonts/cfrevolution-webfont.woff) ;
+      font-weight: normal;
+      font-style: normal;
+
+  }
+  @font-face {
+      font-family: ink_in_the_meattial;
+      src:    url(fonts/inkitmt-webfont.woff) ;
+      font-weight: normal;
+      font-style: normal;
+
+  }
+  @font-face {
+      font-family:shocard_caps_nfregular;
+      src:  url(fonts/sho-cardcapsnf-webfont.woff);
+      font-weight: normal;
+      font-style: normal;
+
+  }
+  @font-face {
+      font-family: times_new_romanbold;
+      src: url(timesbd-webfont.woff) ;
+      font-weight: normal;
+      font-style: normal;
+
+  }
+  @font-face {
+      font-family:ACaslonPro;
+      src: url(fonts/ACaslonPro-Bold.woff);
+  }
+
+  .navbar-default{border-radius: 0px;}
+  .dept{
+    width: 500px;
+    margin: 10px 150px 10px 20px;
+  }
+  .navbar-texts{
+  font-size:20px;
+  }
+  .head{
+    background-color: #730099;
+    min-height: 15px;
+  }
+  footer a{color: white;}
+  footer a:hover,
+  footer a:focus{color: white; }
+  .menu-text:hover, .menu-text:focus {background-color: #ffffff; font-size: 25px; }
+
+  #white_bg:hover,
+  #white_bg:focus{background-color: #ffffff;}
+  #zoom{
+   text-align: center;
+   background-color;
+   border: solid 1px #c3c3c3;
+  }
