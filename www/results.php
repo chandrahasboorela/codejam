@@ -10,10 +10,13 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="bootstrap/js/bootstrap.js"></script>
     <style media="screen">
+    table,th,td {align:center; text-align: center;border: 2px solid black;}
+    th{width: 100px;}
+    td{width: 200px;}
     </style>
   </head>
   <body>
-    <div class="head"></div>
+    <div class="head" style="min-height:12px;"></div>
     <nav class="navbar navbar-default ">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -22,7 +25,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="index.html" ><img class="logo menu-text" style="background-color: #ffffff;" src="imgs/logo.png" alt="SRIIT"></a>
+      <a href="index.html" ><img class="logo menu-text"  src="imgs/logo.png" alt="SRIIT"></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
 	  <ul class="nav navbar-nav navbar-right" style="padding:0px 0px; border:0px">
@@ -59,7 +62,7 @@
       <li class="dropdown">
         <a href="#" class="dropdown-toggle menu-text navbar-texts" style="color:black" id="white_bg" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">codejam <span class="caret"></span></a>
         <ul class="dropdown-menu" style="font-size:18px; border-color:#fefefe; border-radius:0px; min-width:250px" >
-          <li><a href="results.php" class="menu-text">Results</a></li>
+          <li><a href="#" class="menu-text">Results</a></li>
           <li role="separator" class="divider"></li>
           <li><a href="#" class="menu-text">Key</a></li>
         </ul>
@@ -69,13 +72,71 @@
     </div>
   </div>
 </nav>
-<div class="">
+<div>
     <img  class="tech" src="imgs/techfest.png" alt="" />
+    <hr style="margin: 5px 0 5px 0 ;">
+</div>
+<div class="container" align="center" style="margin-top:12px;">
+  <form class="" action="" method="post">
+   <span style="margin: 0 35px 0 0;font-size:25px;"><b>Id :</b></span>
+    <input class="login_text" type="text" name="Id" placeholder="Roll Number" required autofocus >
 
+      <button class="btn btn-success btn-lg login-btn" style="margin-left: 10px;"type="submit" >
+       <span class="glyphicon glyphicon-user"></span> &nbsp GO
+     </button>
+  </form>
 </div>
-<div id="banner" style="margin: 10px 0 15px 0; background-image: url(imgs/codejam.gif) , url(imgs/back.gif) ;">
-<span ><a href="login.html" type="button"  class=" enter btn btn-success btn-lg ">Enter();</a></span>
-</div>
+<div class="container" align="center" style="margin:10px 20px 10px 20px; font-size:18px; max-width:50%;">
+  <ul class="nav nav-tabs" role="tablist">
+  <li role="presentation" class="active"><a   href="#Round-1" aria-controls="home" role="tab" data-toggle="tab">Round-1</a></li>
+      <li role="presentation"><a href="#Round-2" aria-controls="profile" role="tab" data-toggle="tab">Round-2</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active fade" id="Round-1">
+      <div class="" align="center">
+
+      <?php
+      $servername = "localhost";
+      $username = "root";
+      $password = "321654";
+      $dbname = "codejam";
+
+      // Create connection
+      $conn = new mysqli($servername, $username, $password, $dbname);
+      // Check connection
+      if ($conn->connect_error) {
+           die("Connection failed: " . $conn->connect_error);
+      }
+
+      $sql = "SELECT * FROM collections";
+      $result = $conn->query($sql);
+
+      if ($result->num_rows > 0) {
+           echo "<table><tr><th>Q no </th><th>Token no </th><th> Option</th><th>TIme taken</th></tr>";
+           // output data of each row
+           while($row = $result->fetch_assoc()) {
+               echo "<tr><td>" . $row["Question No"]. "</td><td>" . $row["Token No"]. "</td><td> " . $row["Response"]. "</td><td>" .$row["TimeTaken"]. "</td></tr>";
+           }
+           echo "</table>";
+      } else {
+           echo "0 results";
+      }
+
+      $conn->close();
+      ?>
+
+      </div>
+    </div>
+    <div role="tabpanel" class="tab-pane fade " id="Round-2">...</div>
+
+  </div>
+
+ </div>
+
+
+
 
 
   </body>

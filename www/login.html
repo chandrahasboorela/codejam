@@ -13,7 +13,7 @@
     </style>
   </head>
   <body>
-    <div class="head"></div>
+    <div class="head" style="min-height:12px;"></div>
     <nav class="navbar navbar-default ">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -22,7 +22,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="index.html" ><img class="logo menu-text" style="background-color: #ffffff;" src="imgs/logo.png" alt="SRIIT"></a>
+      <a href="index.html" ><img class="logo menu-text" src="imgs/logo.png" alt="SRIIT"></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
 	  <ul class="nav navbar-nav navbar-right" style="padding:0px 0px; border:0px">
@@ -35,10 +35,10 @@
                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" >&times;</span></button>
                <h4 class="modal-title" id="exampleModalLabel">Suggestion</h4>
                  </div>
-              <form action="sugg.php" method="post">
+                <form action="sugg.php" method="post">
                  <div class="modal-body">
                     <div>
-                  <label for="recipient-name" class="control-label">Name <span class="glyphicon glyphicon-user" aria-hidden="true"> </span> </label>
+                       <label for="recipient-name" class="control-label">Name <span class="glyphicon glyphicon-user" aria-hidden="true"> </span> </label>
                        <input type="text" class="form-control" name="name" id="recipient-name">
                      </div>
                      <div>
@@ -73,8 +73,14 @@
     <img  class="tech" src="imgs/techfest.png" alt="" />
 
 </div>
-<div id="banner" style="margin: 10px 0 15px 0; background-image: url(imgs/codejam.gif) , url(imgs/back.gif) ;">
-<span ><a href="login.html" type="button"  class=" enter btn btn-success btn-lg ">Enter();</a></span>
+<div id="login-bg" style="background-image: url(imgs/loginbanner.png); background-repeat: no-repeat;">
+  <form class="form_class" align="center"  action="index.html" method="post">
+     <span style="margin: 0 85px 0 0;font-size:25px; font-family:times_new_romanbold; "><b>Id :</b></span>
+       <input class="login_text" type="text" name="Id" placeholder="Roll Number" required autofocus ><br>
+     <span style="font-size:25px; font-family:times_new_romanbold;  margin-right:15px;"><b>Token No.</b></span>
+       <input class="login_text" type="text" name="name" value="" disabled><br>
+      <button type="submit" class="btn btn-danger btn-lg login-btn" name="btn">Enter </button>
+    </form>
 </div>
 
 
@@ -84,7 +90,7 @@
     <div   style="background-color: 	#730099; ">
       <p>
         <a href="#" style="margin-left:8%;"><img style="height:30px" src="imgs/crt_w.png" alt="Chandrahas Boorela" /> </a>
-        <a href="https://sriit.ac.in" id="footer-sriit" style=" margin-right:5%; padding:5px 0 5px 0 "> SRIIT</a>
+        <a href="https://sriit.ac.in" id="footer-sriit" style=" margin-right:5%; padding:5px 0 5px 0 "> SRIIT </a>
         <a href="https://sriit.ac.in/about.html" style="margin-right:5%;">About</a>
         <a href="https://sriit.ac.in/contact-us.php">Contact</a>
       </p>

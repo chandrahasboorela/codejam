@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>testing</title>
+		<meta charset="utf-8">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	  <style>
+	  </style>
+	</head>
+	<body>
+
+		<form action="sugg.php" method="post">
+	 	 <div >
+
+	 			 <label for="recipient-name" class="control-label">Name <span class="glyphicon glyphicon-user" aria-hidden="true"> </span> </label>
+	 			 <input type="text" class="form-control" name="name" id="recipient-name">
+
+	 	 </div>
+	 	 <div >
+
+	 			 <label for="message-text" class="control-label">Your Proposal <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> </label>
+	 			 <textarea class="form-control" name="idea" id="message-text"></textarea>
+				 <button class="btn btn-success btn-lg " data-dismiss="modal" type="submit">
+		 			<span class="glyphicon glyphicon-send"></span> &nbsp Send
+		 		</button>
+
+	  </form>
+		<?php
+ 		 $servername = "localhost";
+ 		 $username = "root";
+ 		 $password = "321654";
+ 		 $dbname = "codejam";
+ 		 $_SERVER["REQUEST_METHOD"] == "POST";
+ 		 $name = htmlspecialchars($_POST['name']);
+ 		 $text = htmlspecialchars($_POST['idea']);
+ 	 $conn = new mysqli($servername, $username, $password,$dbname);
+
+
+ 	 // Check connection
+ 	 if ($conn->connect_error) {
+ 			 die("Connection failed: " . $conn->connect_error);
+ 	 }
+ 	 echo "Connected successfully <br>"; ?>
+ 	 <?php
+
+ 		 $sql =sprintf("%s %s %s %s %s","INSERT INTO suggestions VALUES (NULL,'",$name,"' ,'",$text,"' );");
+ 	 if ($conn->query($sql) === TRUE) {
+ 	 } else {
+ 			 echo "Error creating database: " . $conn->error;
+
+
+ 	 }
+ 	 ?>
+	</body>
+</html>

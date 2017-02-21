@@ -13,7 +13,7 @@
     </style>
   </head>
   <body>
-    <div class="head"></div>
+    <div class="head" style="min-height:12px;"></div>
     <nav class="navbar navbar-default ">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -22,7 +22,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a href="index.html" ><img class="logo menu-text" style="background-color: #ffffff;" src="imgs/logo.png" alt="SRIIT"></a>
+      <a href="index.html" ><img class="logo menu-text" src="imgs/logo.png" alt="SRIIT"></a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
 	  <ul class="nav navbar-nav navbar-right" style="padding:0px 0px; border:0px">
@@ -59,7 +59,7 @@
       <li class="dropdown">
         <a href="#" class="dropdown-toggle menu-text navbar-texts" style="color:black" id="white_bg" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true">codejam <span class="caret"></span></a>
         <ul class="dropdown-menu" style="font-size:18px; border-color:#fefefe; border-radius:0px; min-width:250px" >
-          <li><a href="results.php" class="menu-text">Results</a></li>
+          <li><a href="#" class="menu-text">Results</a></li>
           <li role="separator" class="divider"></li>
           <li><a href="#" class="menu-text">Key</a></li>
         </ul>
@@ -69,13 +69,31 @@
     </div>
   </div>
 </nav>
-<div class="">
+<div>
     <img  class="tech" src="imgs/techfest.png" alt="" />
+    <hr style="margin: 5px 0 5px 0 ;">
+</div>
+  <p style="margin-top:12px; font-size:35px; font-weight:bold; text-align:center;">
+    Key
+  </p>
+</div>
+<div class="container" style="margin:10px 20px 10px 20px; font-size:18px;">
+  <ul class="nav nav-tabs" role="tablist">
+  <li role="presentation" class="active"><a  " href="#Round-1" aria-controls="home" role="tab" data-toggle="tab">Round-1</a></li>
+      <li role="presentation"><a href="#Round-2" aria-controls="profile" role="tab" data-toggle="tab">Round-2</a></li>
+  </ul>
 
-</div>
-<div id="banner" style="margin: 10px 0 15px 0; background-image: url(imgs/codejam.gif) , url(imgs/back.gif) ;">
-<span ><a href="login.html" type="button"  class=" enter btn btn-success btn-lg ">Enter();</a></span>
-</div>
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active fade" id="Round-1"></div>
+    <div role="tabpanel" class="tab-pane fade " id="Round-2">...</div>
+
+  </div>
+
+ </div>
+
+
+
 
 
   </body>
